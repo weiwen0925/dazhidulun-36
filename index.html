@@ -289,7 +289,7 @@ body{font-size:20px!important;}
 <meta name="wy-l1" content="iframe-xor-b64">
 <meta name="wy-l5" content="cjk-xor-b64">
 <meta name="robots" content="noai, noimageai, noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="googlebot" content="noai, noimageai, noindex, nofollow"><meta name="GPTBot" content="noindex, nofollow, noai"><meta name="ChatGPT-User" content="noai"><meta name="Google-Extended" content="noai"><meta name="ClaudeBot" content="noindex, nofollow"><meta name="anthropic-ai" content="noai"><meta name="cohere-ai" content="noai"><meta name="CCBot" content="noindex, nofollow"><meta name="PerplexityBot" content="noindex, nofollow"><meta name="bingbot" content="noai, noimageai"><meta name="Bytespider" content="noindex, nofollow"><meta name="Amazonbot" content="noindex, nofollow"><meta name="omgili" content="noindex"><meta name="FacebookBot" content="noindex"><meta name="Applebot-Extended" content="noai">
-<style id="wy-preguard">/* L4 preguard */html.wy-preguard,html.wy-preguard body{visibility:hidden!important;}html.wy-locked,html.wy-locked body,html.wy-locked body *{visibility:hidden!important;background:#fff!important;}</style>
+<style id="wy-preguard">/* L4 preguard */html.wy-preguard,html.wy-preguard body,html.wy-preguard body *{visibility:hidden!important;}html.wy-locked,html.wy-locked body{display:none!important;background:#fff!important;}html.wy-locked body *{display:none!important;}</style>
 <style id="wy-print-guard">
 @media print {
   html, body, body * { visibility: hidden !important; }
@@ -319,11 +319,17 @@ body{font-size:20px!important;}
     try{
       var bin = atob(b64);
       var key = XOR_KEY;
-      var out = '';
+      var bytes = new Uint8Array(bin.length);
       for(var i=0;i<bin.length;i++){
-        out += String.fromCharCode(bin.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+        bytes[i] = bin.charCodeAt(i) ^ key.charCodeAt(i % key.length);
       }
-      return decodeURIComponent(escape(out));
+      if(typeof TextDecoder !== 'undefined'){
+        return new TextDecoder('utf-8').decode(bytes);
+      }
+      // fallback for ancient browsers
+      var s = '';
+      for(var j=0;j<bytes.length;j++) s += String.fromCharCode(bytes[j]);
+      return decodeURIComponent(escape(s));
     }catch(e){ return ''; }
   }
 
@@ -369,21 +375,32 @@ body{font-size:20px!important;}
     return;
   }
 
-  // ----- L6: async freshness HEAD ping -----
+  // ----- L6: async freshness HEAD ping (uses current page URL — guaranteed reachable on online) -----
   function freshnessPing(){
     return new Promise(function(resolve, reject){
       var t = Date.now() + '.' + Math.random().toString(36).slice(2,8);
-      var url = 'https://' + ALLOWED_HOST + ALLOWED_PATH + '?_wyping=' + t;
+      // ping the SAME url the user is currently viewing
+      var base = (location.href || '').split('#')[0].split('?')[0];
+      var url = base + '?_wyping=' + t;
       var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
-      var to = setTimeout(function(){ if(ctl) ctl.abort(); reject(new Error('timeout')); }, 6000);
-      fetch(url, {method:'HEAD', cache:'no-store', signal: ctl ? ctl.signal : undefined, mode:'cors'})
-        .then(function(r){ clearTimeout(to); if(r.ok || r.status===0) resolve(); else reject(new Error('status '+r.status)); })
-        .catch(function(err){ clearTimeout(to);
-          // some hosts block HEAD; try GET range as fallback
-          fetch(url, {method:'GET', cache:'no-store', headers:{'Range':'bytes=0-1'}, mode:'cors'})
-            .then(function(r2){ if(r2.ok || r2.status===0 || r2.status===206) resolve(); else reject(err); })
-            .catch(function(){ reject(err); });
-        });
+      var to = setTimeout(function(){ if(ctl) try{ctl.abort();}catch(e){} reject(new Error('timeout')); }, 8000);
+      function ok(){ clearTimeout(to); resolve(); }
+      function bad(err){ clearTimeout(to); reject(err || new Error('ping fail')); }
+      try{
+        fetch(url, {method:'HEAD', cache:'no-store', signal: ctl ? ctl.signal : undefined, credentials:'same-origin'})
+          .then(function(r){ if(r.ok || r.status===0) ok(); else {
+            // fallback: GET range
+            fetch(url, {method:'GET', cache:'no-store', headers:{'Range':'bytes=0-1'}, credentials:'same-origin'})
+              .then(function(r2){ if(r2.ok || r2.status===0 || r2.status===206) ok(); else bad(new Error('status '+r2.status)); })
+              .catch(bad);
+          } })
+          .catch(function(){
+            // HEAD unsupported — try GET
+            fetch(url, {method:'GET', cache:'no-store', headers:{'Range':'bytes=0-1'}, credentials:'same-origin'})
+              .then(function(r2){ if(r2.ok || r2.status===0 || r2.status===206) ok(); else bad(new Error('status '+r2.status)); })
+              .catch(bad);
+          });
+      }catch(e){ bad(e); }
     });
   }
 
@@ -401,9 +418,22 @@ body{font-size:20px!important;}
     }catch(e){}
   }
 
+  // ensure decoders run after DOM is fully parsed (critical: script runs early before body finished)
+  function whenDOMReady(cb){
+    if(document.readyState === 'complete' || document.readyState === 'interactive'){
+      // small delay to ensure body finished parsing
+      setTimeout(cb, 0);
+    } else {
+      document.addEventListener('DOMContentLoaded', function(){ setTimeout(cb, 0); }, {once:true});
+    }
+  }
+
   freshnessPing().then(function(){
-    unlock();
-    runDecoders();
+    // run decoders FIRST so iframe srcdoc is set before resize-frame setup attaches
+    whenDOMReady(function(){
+      runDecoders();
+      unlock();
+    });
   }).catch(function(){
     silentBlank();
   });
