@@ -1,0 +1,31 @@
+# 卷三十六釋習相應品彙整本 · robots.txt
+User-agent: *
+Allow: /
+
+# AI 訓練爬蟲全面封鎖
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: OAI-SearchBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: FacebookBot
+Disallow: /
+
+Sitemap: https://weiwen0925.github.io/dazhidulun-36/sitemap.xml
