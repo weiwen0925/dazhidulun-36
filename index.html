@@ -2179,5 +2179,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C36P19:END-->
+<!--WY-C36P20:BEGIN-->
+<style id="wy-c36p20-css">
+.c36p20-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c36p20-fabbox.show{display:block;}
+.c36p20-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c36p20-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c36p20-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c36p20-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c36p20-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c36p20-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c36p20-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c36p20-modal.open{display:flex;}
+.c36p20-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c36p20-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c36p20-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c36p20-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c36p20-close:hover{background:#e3d5b8;}
+.c36p20-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c36p20-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c36p20-tbl th,.c36p20-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c36p20-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c36p20-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c36p20-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c36p20-tbl b{color:#8b2500;}
+.c36p20-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c36p20-note b{color:#8b2500;}
+@media(max-width:900px){.c36p20-fabbox{right:14px;}.c36p20-tbl{font-size:11.5px;}.c36p20-card{padding:26px 14px 16px;}}
+</style>
+<div class="c36p20-fabbox" id="c36p20Box"><button class="c36p20-btn" id="c36p20Btn" type="button" aria-label="開啟全景總表"><span class="c36p20-ic">▦</span><span class="c36p20-ls"><span class="c36p20-l1">本品 · 三世不合</span><span class="c36p20-l2">自相空義論 · 三際求法不可見</span></span></button></div><div class="c36p20-modal" id="c36p20Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c36p20-card"><button class="c36p20-close" id="c36p20Close" type="button" aria-label="關閉">×</button><h3>卷三十六·第二十品 前際不與後際合：自相空義論 · 全景總表</h3><p class="sub">卷三十六·第二十品｜自相空到三世不合四節點·三世逐際破前後現在·三世絕緣測試·中論觀時品交響</p><table class="c36p20-tbl"><caption>一、核心邏輯架構：從本體到時間（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>經文</td><td>菩薩摩訶薩行般若波羅蜜時，入諸法自相空，入已色不作合不作不合；色不與前際合，何以故？不見前際故——三世皆不可見</td></tr><tr><td>四節點主幹</td><td>[本體因]自相空（諸法本無固定特徵）→[法體否定]五蘊不合不不合（合的條件被抽除）→[時間否定]不與三際合（前際後際現在皆不可結合）→[終極果]三際不可見當體即空</td></tr><tr><td>雙重否定方法論</td><td>不合＋非不合的雙重否定，非文字遊戲——若只說不合會被誤解為色與前際是兩個各自實有的東西只是沒有關係，仍落實有見；加一句非不合把不合這概念也一併拆掉</td></tr><tr><td>與中論八不同型結構</td><td>此雙重否定正是《中論》不生不滅、不常不斷、不一不異、不來不去八不的同型結構，龍樹辨破實有見的一貫手法</td></tr></tbody></table><table class="c36p20-tbl"><caption>二、三世逐際破合與斷聯總結</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>破前際合·已滅無體但有名字</td><td>前際空無所有，但有名字——過去的實體已滅謝僅存留概念，實體的色無法與已滅的虛妄概念結合</td></tr><tr><td>破後際合·未有未生</td><td>後際者未有未生，色不應與後際合——未來狀態為絕對的無，現有色法無法跨時空與不存在的無發生結合</td></tr><tr><td>破現在合·生滅不住不可取相</td><td>現在色生滅不住故不可取相，色不應與現在合——現在剎那極短剛生即滅沒有停留，無法抓取固定相狀，現在的虛妄性與過去未來同等</td></tr><tr><td>三世斷聯對照表</td><td>前際（已滅無體）認知謬誤為執著過去記憶，破斥結果無法與名字合；後際（未有未生）認知謬誤為恐懼期待未來，破斥結果無法與虛無合；現在（生滅不住）認知謬誤為執著當下實有，破斥結果無法與流動合</td></tr><tr><td>五蘊孤立無依</td><td>三際皆不可見，五蘊孤立無依，不與時間軸產生實質關聯——不是說五蘊變成獨立漂浮的實體，而是五蘊既無自相可立也無時間可附，當下就是空</td></tr></tbody></table><table class="c36p20-tbl"><caption>三、修行心法與雙重鏡像</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>煩惱生起的妄合模型</td><td>將現在的感受與過去的記憶或未來的想像強行黏合產生妄合——這是一切瞋恨焦慮執著的根源；因被罵而生氣，即是現在的受與過去的記憶強行結合所致</td></tr><tr><td>五步心法循環</td><td>①看清妄合②斬斷時間連結（般若心法·三際窮空孤明歷歷）③三世絕緣測試（逐一叩問能回到過去嗎/能去到未來嗎/能停在現在嗎，皆斷）④剝離實有感（觀堅痛等自相依緣而起無自性）⑤體驗時空載體瓦解後的孤明歷歷</td></tr><tr><td>與中論觀時品交響</td><td>以三世空記不與際合——已去無有去未去亦無去離已去未去去時亦無去；以自性空記不作合——若法有自性則應常住若無自性則無合散；以畢竟空記不可見結論——諸法實相言語道斷心行處滅</td></tr><tr><td>三維總陣</td><td>問因（本體·入自相空無實體故）→觀時（現象·三世逐破去去時皆無）→證果（境界·三際不可見畢竟空戲論寂滅），三者一氣呵成缺一不可</td></tr><tr><td>終極收束</td><td>三際求法不可見，五蘊當體即無生——無論在過去現在未來哪一際尋找一個實在的法都將不可見不可得，五蘊在當下就是無生就是空</td></tr></tbody></table><p class="c36p20-note">本品承前文「無合無不合」，進一步以「自相空」為因，推導出五蘊不與前際、後際、現在三世結合的嚴密演繹：前際空無所有但有名字，已滅無體無法結合；後際未有未生，絕對之無無法結合；現在生滅不住不可取相，同樣無法結合——三世皆「不可見」，五蘊遂孤立無依，當體即空。此一推導折回日常修行：煩惱之生起，正是現在的感受與過去記憶或未來想像強行黏合的「妄合」，般若心法即是斬斷此三者連結，讓「三際窮空，孤明歷歷」的純粹覺知現前。與《中論·觀時品》「已去無有去，未去亦無去」交響映證，終歸「三際求法不可見，五蘊當體即無生」的般若時空斷聯境界。</p></div></div>
+<script id="wy-c36p20-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c36p20Btn"),BOX=document.getElementById("c36p20Box"),MODAL=document.getElementById("c36p20Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=19;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c36p20Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C36P20:END-->
 </body>
 </html>
