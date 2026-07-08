@@ -2073,5 +2073,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C36P17:END-->
+<!--WY-C36P18:BEGIN-->
+<style id="wy-c36p18-css">
+.c36p18-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c36p18-fabbox.show{display:block;}
+.c36p18-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c36p18-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c36p18-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c36p18-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c36p18-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c36p18-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c36p18-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c36p18-modal.open{display:flex;}
+.c36p18-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c36p18-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c36p18-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c36p18-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c36p18-close:hover{background:#e3d5b8;}
+.c36p18-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c36p18-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c36p18-tbl th,.c36p18-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c36p18-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c36p18-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c36p18-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c36p18-tbl b{color:#8b2500;}
+.c36p18-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c36p18-note b{color:#8b2500;}
+@media(max-width:900px){.c36p18-fabbox{right:14px;}.c36p18-tbl{font-size:11.5px;}.c36p18-card{padding:26px 14px 16px;}}
+</style>
+<div class="c36p18-fabbox" id="c36p18Box"><button class="c36p18-btn" id="c36p18Btn" type="button" aria-label="開啟全景總表"><span class="c36p18-ic">▦</span><span class="c36p18-ls"><span class="c36p18-l1">本品 · 不見相應總論</span><span class="c36p18-l2">五度如盲慧如導 · 畢竟清淨無所見即真見</span></span></button></div><div class="c36p18-modal" id="c36p18Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c36p18-card"><button class="c36p18-close" id="c36p18Close" type="button" aria-label="關閉">×</button><h3>卷三十六·第十八品 不見相應：五度與般若之合 · 全景總表</h3><p class="sub">卷三十六·第十八品｜五度世間法清淨之疑·點鐵成金三輪體空·修而不證今是觀時非證時·勳勞功賞</p><table class="c36p18-tbl"><caption>一、兩重核心質疑與四大支柱（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>經文六重不見</td><td>不見般若波羅蜜若相應若不相應，不見五波羅蜜、五眾、六根六塵六識、四念處乃至一切種智若相應若不相應——正是這樣的不見才是真正相應</td></tr><tr><td>質疑一·五度清淨之疑</td><td>布施涉及金錢人情、忍辱涉及衝突，此等世間有為法如何也能稱為畢竟清淨？</td></tr><tr><td>質疑二·菩薩身份雙重弔詭</td><td>菩薩非聲聞辟支佛，云何有三十七品？未得佛道，云何有十力、四無所畏？</td></tr><tr><td>四大支柱</td><td>①般若波羅蜜相畢竟清淨故（體）②五事離般若波羅蜜不名波羅蜜（用）③今是觀時非是證時（行）④勳勞既立然後受其功賞（位）</td></tr></tbody></table><table class="c36p18-tbl"><caption>二、點鐵成金與修而不證</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>離則世間合則彼岸</td><td>五度（離）為世間善法仍在此岸；般若（導）為畢竟清淨諸法實相；波羅蜜（合）為到彼岸出世解脫——單有布施而無般若最多只是布施善業，夠不上布施波羅蜜</td></tr><tr><td>三輪體空點化布施</td><td>不見施者、不見受者、無財物故——施者空（不執著我在給予）、受者空（不執著對象在接受）、物空（不執著財物實有性），因看清無自性染污無從附著</td></tr><tr><td>萬法歸一一亦不立</td><td>五眾→十二入→十八界→十二因緣→十八空→四念處→大慈大悲→一切種智，全都無有定性無有定法——菩薩觀一切法時注入無定性的覺知，但連無定性本身也不被立為固定的法</td></tr><tr><td>修而不證·今是觀時非是證時</td><td>入空無相無作三昧，菩薩住是三解脫門作是念言：今是觀時，非是證時——修習四念處與三三昧離涅槃僅一步之遙，若不慎取證便墜入聲聞究竟涅槃</td></tr><tr><td>三十七道品雙重理由</td><td>為他（欲以聲聞辟支佛道度眾生故）、為自（新發意菩薩讀誦正憶念分別作為入門階梯）——觀而不入，入而不證</td></tr></tbody></table><table class="c36p18-tbl"><caption>三、勳勞功賞與畢竟清淨</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>佛十力亦是我分</td><td>菩薩自於菩薩十力四無所畏十八不共法中住，若聞若憶想分別佛十力等甚深微妙，亦是我分——如太子尚未即位但知王國終將是他的，故以王者角度學習治理</td></tr><tr><td>勳勞既立然後受其功賞</td><td>菩薩無量阿僧祇劫來修習佛十力等，坐佛樹下時得無礙解脫故增益清淨，譬如勳勞既立然後受其功賞——實質功德可以早於名號之授予，功已立而名未至</td></tr><tr><td>五度如盲慧如導</td><td>五度能行但若無般若無見，只能在世間善法層次盲目行走到不了彼岸；般若能見且清淨，指引一切行為方向——盲與眼合方能行至目的地，和合方名波羅蜜</td></tr><tr><td>菩薩雙向姿態</td><td>向上（佛功德·亦是我分勳勞先立）與向下（聲聞法·為度眾生用而不證）皆由般若勢力統合，沒有這是聲聞法那是佛果法的二元分別</td></tr><tr><td>本品五要</td><td>①般若畢竟清淨故（體）②五事離般若不名波羅蜜（用）③諸法無有定性無有定法（觀）④今是觀時非是證時（行）⑤勳勞既立然後受其功賞（位）——體用觀行位完整呈現不見相應之深妙境界</td></tr></tbody></table><p class="c36p18-note">本品解答菩薩「不見若相應若不相應」的兩重核心質疑：五度世間法為何能畢竟清淨？菩薩何以兼具聲聞與佛地功德？前者以「點鐵成金」譬喻與三輪體空作答——五事離般若波羅蜜不名波羅蜜，與般若和合方名波羅蜜，不見施者受者財物即是布施波羅蜜之真義；後者以「修而不證」（今是觀時，非是證時）與「勳勞既立，然後受其功賞」雙重策略解開——菩薩觀聲聞法為度眾生而不取證，於佛地功德則因無量劫修習而預認「亦是我分」，實質先具，名號後授。終以「五度如盲，慧如導，和合方名波羅蜜」總攝：內懷般若外現慈悲，畢竟清淨，無所見即真見。</p></div></div>
+<script id="wy-c36p18-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c36p18Btn"),BOX=document.getElementById("c36p18Box"),MODAL=document.getElementById("c36p18Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=17;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c36p18Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C36P18:END-->
 </body>
 </html>
