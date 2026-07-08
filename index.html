@@ -2020,5 +2020,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C36P16:END-->
+<!--WY-C36P17:BEGIN-->
+<style id="wy-c36p17-css">
+.c36p17-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c36p17-fabbox.show{display:block;}
+.c36p17-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c36p17-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c36p17-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c36p17-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c36p17-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c36p17-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c36p17-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c36p17-modal.open{display:flex;}
+.c36p17-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c36p17-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c36p17-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c36p17-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c36p17-close:hover{background:#e3d5b8;}
+.c36p17-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c36p17-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c36p17-tbl th,.c36p17-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c36p17-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c36p17-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c36p17-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c36p17-tbl b{color:#8b2500;}
+.c36p17-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c36p17-note b{color:#8b2500;}
+@media(max-width:900px){.c36p17-fabbox{right:14px;}.c36p17-tbl{font-size:11.5px;}.c36p17-card{padding:26px 14px 16px;}}
+</style>
+<div class="c36p17-fabbox" id="c36p17Box"><button class="c36p17-btn" id="c36p17Btn" type="button" aria-label="開啟全景總表"><span class="c36p17-ic">▦</span><span class="c36p17-ls"><span class="c36p17-l1">本品 · 總相空與別相空</span><span class="c36p17-l2">慈心喻水火喻 · 三軌記憶總持</span></span></button></div><div class="c36p17-modal" id="c36p17Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c36p17-card"><button class="c36p17-close" id="c36p17Close" type="button" aria-label="關閉">×</button><h3>卷三十六·第十七品 諸法空相：總相別相之辨 · 全景總表</h3><p class="sub">卷三十六·第十七品｜漏斗式分類學總相別相·慈心喻觀想空盲點·水火喻性常自空·分別說手術刀對治</p><table class="c36p17-tbl"><caption>一、總相空與別相空的邏輯疑情（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>經文漏斗式分類</td><td>是諸法空相，不生不滅不垢不淨不增不減——由總相層層下開：五蘊→十二入十八界→十二因緣→四諦→四果辟支佛佛，皆無所有</td></tr><tr><td>質疑者的邏輯</td><td>人皆知空中無所有，佛何以分別說五眾等諸法各各空？——質疑者預設「邏輯涵蓋」即等於「對治涵蓋」，若結論皆是無何不一刀切</td></tr><tr><td>論主答·雙層架構</td><td>有人雖復習空，而想空中猶有諸法；如行慈人雖無眾生而想眾生得樂，自得無量福故——先以慈心喻破觀想之執，再以水火喻確立性空之本然</td></tr><tr><td>對治從不在頂層而在底層</td><td>眾生的執著並非邏輯統一體而是具體碎片——抓著色、抓著受、抓著眼識，必須用對應的五蘊空十二入空十八界空逐一切除</td></tr></tbody></table><table class="c36p17-tbl"><caption>二、慈心喻破觀想空盲點與水火喻立性空</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>慈心喻診斷句</td><td>有人雖復習空，而想空中猶有諸法——三昧定力觀法看似皆空，潛意識仍認定物質現象具有實體，只是用力把它觀想成空而已</td></tr><tr><td>慈心喻的假想觀機制</td><td>如行慈人雖無眾生而想眾生得樂，自得無量福故——客觀事實眾生並未實受惠，修慈者依賴心智假想，效應邊界僅止於個人福報而非觸及實相</td></tr><tr><td>想與智兩維度對照</td><td>想（主觀投射）·慈心觀最高只得福報；智（客觀契入）·般若實相觀如實觀察諸法實相，穿透表象直接看見法爾如是的本體，獲得須陀洹至佛道之智慧解脫</td></tr><tr><td>水火喻確立性常自空</td><td>諸法性常自空，非空三昧故令法空——如水冷相，火令其熱；水的本質是冷（原廠設定），加熱是外力暫時擾動，性常自空不待造，若三昧力消失現象立即反彈</td></tr><tr><td>破除三昧力錯覺</td><td>若言以空三昧故令法空者，是事不然！空若必須由三昧維持即成有為法，被造作出來便有成住壞空，非究竟空；空是發現真理不是變魔術</td></tr></tbody></table><table class="c36p17-tbl"><caption>三、中觀理路統攝與三軌記憶總持</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>觀空與性空核心比較矩陣</td><td>觀想空（人工造作·慈心喻·主觀覆蓋落於想·最終果報無量福報）vs 本體空（發現還原·水火喻·如實照見住於智·最終果報須陀洹至佛道）</td></tr><tr><td>分別說的解構工程</td><td>五蘊空對治身心連續體之執，十二入空對治感知外境之執，十八界空對治能所對待之執，十二因緣空對治生命流轉之執，四諦智得空對治修證階位之執，四果辟支佛佛空對治果位與道之執——分別說是手術刀非贅句</td></tr><tr><td>與中論觀因緣品互文</td><td>空是諸法的原廠設定不需三昧加工，正是中觀諸法不自生亦不從他生不共不無因是故知無生的微觀範例</td></tr><tr><td>三軌記憶口訣</td><td>第一軌：性空如水冷，非由三昧成（水火喻·智）；第二軌：慈觀唯心想，般若見本空（慈心喻·想）；第三軌：分別如手術，各各破執取（分別說·解構工程）</td></tr><tr><td>終極一句</td><td>藍圖已備，實相待證——問疑情（何須分別說）→答區別（性空非造作想空非實義）→觀實相（不以定力滅萬法本無生），三步收束整場微觀辯證</td></tr></tbody></table><p class="c36p17-note">本品處理「諸法空相」總綱與「五蘊十二入十八界各各空」細別之間看似冗餘的邏輯接縫。論主以慈心喻破「觀想空可成」之執——修慈者想眾生得樂而眾生未實受惠，此類假想投射之空只得福報而非般若；再以水火喻確立「性常自空，非空三昧故令法空」——空如水之本冷，是諸法的原廠設定，不待三昧加工亦不能由三昧維持。兩喻一破一立，正是龍樹「諸法無自性」核心命題的微觀演示；而「分別說」則被證成為精準對治具體執著碎片的手術刀，絕非邏輯贅詞——性空如水冷非由三昧成，慈觀唯心想般若見本空，分別如手術各各破執取。</p></div></div>
+<script id="wy-c36p17-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c36p17Btn"),BOX=document.getElementById("c36p17Box"),MODAL=document.getElementById("c36p17Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=16;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c36p17Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C36P17:END-->
 </body>
 </html>
