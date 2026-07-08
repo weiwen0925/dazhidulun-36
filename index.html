@@ -1702,5 +1702,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C36P10:END-->
+<!--WY-C36P11:BEGIN-->
+<style id="wy-c36p11-css">
+.c36p11-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c36p11-fabbox.show{display:block;}
+.c36p11-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c36p11-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c36p11-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c36p11-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c36p11-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c36p11-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c36p11-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c36p11-modal.open{display:flex;}
+.c36p11-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c36p11-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c36p11-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c36p11-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c36p11-close:hover{background:#e3d5b8;}
+.c36p11-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c36p11-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c36p11-tbl th,.c36p11-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c36p11-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c36p11-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c36p11-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c36p11-tbl b{color:#8b2500;}
+.c36p11-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c36p11-note b{color:#8b2500;}
+@media(max-width:900px){.c36p11-fabbox{right:14px;}.c36p11-tbl{font-size:11.5px;}.c36p11-card{padding:26px 14px 16px;}}
+</style>
+<div class="c36p11-fabbox" id="c36p11Box"><button class="c36p11-btn" id="c36p11Btn" type="button" aria-label="開啟全景總表"><span class="c36p11-ic">▦</span><span class="c36p11-ls"><span class="c36p11-l1">本品 · 七空</span><span class="c36p11-l2">病藥相治 · 雙泯對待是非俱亡</span></span></button></div><div class="c36p11-modal" id="c36p11Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c36p11-card"><button class="c36p11-close" id="c36p11Close" type="button" aria-label="關閉">×</button><h3>卷三十六·第十一品 略說七空 · 全景總表</h3><p class="sub">卷三十六·第十一品｜七空與十八空繁簡互通·雙重序列本體對治·病藥相治四句破除·不見與空亦復空</p><table class="c36p11-tbl"><caption>一、七空的雙重序列結構（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>經文七空</td><td>性空、自相空、諸法空、不可得空、無法空、有法空、無法有法空——習應七空，是名與般若波羅蜜相應</td></tr><tr><td>繁簡互通</td><td>佛法中廣說則十八空，略說則七空；如廣說助道法則有三十七品，略說則七覺分——七空並非降級，而是高度濃縮的實用對治系統，多用利益眾生故</td></tr><tr><td>第一序列·本體基石</td><td>性空→自相空→諸法空→不可得空，範疇為靜態分析理論解構，功能為建立空的總釋基準（因緣無自性）</td></tr><tr><td>第二序列·辯證掃蕩</td><td>無法空→有法空→無法有法空，範疇為動態對治心理療癒，功能為清除修行過程中的二元執著（離四句）</td></tr></tbody></table><table class="c36p11-tbl"><caption>二、病藥相治·四句破除矩陣</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>前四空層層推進</td><td>性空——本末尚自空何況現在，因緣尚空何況果報；自相空——總相別相盡觀其空心則遠離；諸法空——用是二空諸法皆空；不可得空——諸法空故更無所得</td></tr><tr><td>無法空·第一帖藥</td><td>病徵：眾生執著有法有相為真實；處方：取於無法用前四空破一切有法；副作用：離有而存於無，新的執著冒出</td></tr><tr><td>有法空·第二帖藥</td><td>病徵：行者發現執著無亦非，心無所寄還欲存有；處方：略說有法空，以存有心薄故</td></tr><tr><td>無法有法空·雙遮契入中道</td><td>行者以無法空為非心還疑有，若心觀有還疑無法；是故有無俱觀其空，如內外空觀——雙遣兩邊心無所寄</td></tr><tr><td>四句破除矩陣</td><td>第一句有→無法空（離有）；第二句無→有法空（離無）；第三句亦有亦無→無法有法空（有無俱觀其空）；第四句非有非無→同上雙遮，此即《中論》破四句之標準格式</td></tr></tbody></table><table class="c36p11-tbl"><caption>三、究竟弔詭與畢竟清淨</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>滅諸觀的自我指涉弔詭</td><td>汝言知一切法空滅諸觀是名相應，如是觀是名相應不如是觀則不相應，分別是非故即亦是觀，云何言滅？——若滅諸觀成為新標準，本身即是新見解</td></tr><tr><td>破局樞紐·以是故——</td><td>論主未正面辯解而順水推舟，從用空破有進階到用空破空——藥本身也要消去，施藥者的位置也被戳破</td></tr><tr><td>不見·真正的相應</td><td>不見般若波羅蜜若相應若不相應——一旦覺得自己相應對了，那個覺得自己不錯的念頭即是最大的不相應；不見並非否認功德而是不於相應中再立相應之見</td></tr><tr><td>空亦復空的究竟心法</td><td>《中論》火亦自滅之譬喻——滅諸觀是藥治妄想之病，若病癒而抱藥不放藥即成病；大火燒盡木頭，木盡火亦熄滅，不留灰燼，藥病俱除</td></tr><tr><td>七空三層總結</td><td>觀體性（靜·前四空）本性自相皆空歸於不可得；修對治（動·後三空）破有存無破無存有有無雙遣；入實相（究竟）不見+空亦復空，相應亦空畢竟清淨——雙泯對待，是非俱亡</td></tr></tbody></table><p class="c36p11-note">本品解「何以不說十八空但說七空」之疑：七空非降級而是高度濃縮的實用對治系統，前四空建立靜態本體基石（性空、自相空、諸法空、不可得空），後三空展開動態辯證掃蕩（無法空破有、有法空破無、無法有法空雙遮契入中道），恰對應《中論》破四句的標準格式。至究竟處論主更以「不見」化解「滅諸觀是否亦是一種觀」的自我指涉弔詭——真正的相應不在於自覺「我已相應」，而在於連這自覺也一併泯除，如《中論》火亦自滅之喻，藥去病除，藥亦不留。七空義由觀體性、修對治、入實相三層層層收束，終歸「雙泯對待，是非俱亡」的般若究竟相應。</p></div></div>
+<script id="wy-c36p11-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c36p11Btn"),BOX=document.getElementById("c36p11Box"),MODAL=document.getElementById("c36p11Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=10;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c36p11Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C36P11:END-->
 </body>
 </html>
