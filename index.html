@@ -3886,5 +3886,63 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH36P21:END-->
+<!--WY-C36TOCBH:BEGIN-->
+<style id="wy-c36tocbh-css">
+.toc-bh{position:absolute;bottom:8px;z-index:3;display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:14px;cursor:pointer;background:linear-gradient(135deg,#4a5a68,#232d36);color:#f7ecd2;font-family:"Noto Sans TC",sans-serif;font-size:11.5px;letter-spacing:1px;font-weight:600;line-height:1;white-space:nowrap;box-shadow:0 1px 4px rgba(20,26,32,.4);border:1px solid rgba(200,215,230,.3);user-select:none;transition:filter .2s,transform .2s,box-shadow .2s;}
+.toc-bh:hover{filter:brightness(1.12);transform:translateY(-1px);box-shadow:0 4px 12px rgba(20,26,32,.5);}
+.toc-bh:focus-visible{outline:2px solid #bcd4ea;outline-offset:2px;}
+.toc-bh .bt-ic{font-size:11px;line-height:1;}
+@media(max-width:520px){.toc-bh{padding:3px 9px;letter-spacing:.3px;}}
+</style>
+<script id="wy-c36tocbh-js">(function(){
+function place(card,bh,tbl){
+  var r=10;
+  if(tbl){
+    var cs=getComputedStyle(tbl);
+    var tr=parseFloat(cs.right); if(isNaN(tr))tr=10;
+    var w=tbl.offsetWidth||0;
+    if(w>0) r=tr+w+8; else r=tr+70;
+  }
+  bh.style.right=r+"px";
+}
+function build(){
+  var cards=document.querySelectorAll("a.toc-card");
+  for(var i=0;i<cards.length;i++){
+    var card=cards[i];
+    var tbl=card.querySelector(".toc-tbl");
+    if(!tbl)continue;
+    var n=tbl.getAttribute("data-tbl");if(!n)continue;
+    var bh=card.querySelector(".toc-bh");
+    if(!bh){
+      var cs=getComputedStyle(card);
+      if(cs.position==="static")card.style.position="relative";
+      bh=document.createElement("span");bh.className="toc-bh";bh.setAttribute("data-bh",n);
+      bh.setAttribute("role","button");bh.setAttribute("tabindex","0");
+      bh.setAttribute("aria-label","第"+n+"品 白話翻譯表");bh.title="本品白話翻譯表";
+      bh.innerHTML='<span class="bt-ic">\u8b6f</span>白話';
+      card.appendChild(bh);
+    }
+    place(card,bh,tbl);
+  }
+}
+function openBH(n){var m=document.getElementById("bh36p"+n+"Modal");if(m){m.classList.add("open");}else{location.hash="#chapter-"+n;}}
+document.addEventListener("click",function(e){
+  var b=(e.target&&e.target.closest)?e.target.closest(".toc-bh"):null;if(!b)return;
+  e.preventDefault();e.stopPropagation();openBH(b.getAttribute("data-bh"));
+},true);
+document.addEventListener("keydown",function(e){
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  var b=(e.target&&e.target.closest)?e.target.closest(".toc-bh"):null;if(!b)return;
+  e.preventDefault();openBH(b.getAttribute("data-bh"));
+});
+build();
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",build);
+window.addEventListener("resize",function(){
+  var cards=document.querySelectorAll("a.toc-card");
+  for(var i=0;i<cards.length;i++){var t=cards[i].querySelector(".toc-tbl"),b=cards[i].querySelector(".toc-bh");if(t&&b)place(cards[i],b,t);}
+});
+var c=0,iv=setInterval(function(){build();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C36TOCBH:END-->
 </body>
 </html>
